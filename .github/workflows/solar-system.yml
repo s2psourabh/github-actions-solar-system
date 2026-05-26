@@ -39,7 +39,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout
-          uses: actions/Checkout@v4
+          uses: actions/checkout@v4
           
         - name: Setup Node.js
           uses: actions/setup-node@v6
@@ -49,10 +49,10 @@ jobs:
 
         - name: Run Code-Coverage Command
           continue-on-error: true
-          run: npm run code-coverage
+          run: npm run coverage
 
         - name: Code-Coverage-Result
-          uses: actions/download-artifact@v8
+          uses: actions/upload-artifact@v4
           with:
              path: coverage
              retention-days: 5
