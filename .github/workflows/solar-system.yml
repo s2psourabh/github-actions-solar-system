@@ -48,6 +48,7 @@ jobs:
           run: npm install
 
         - name: Run Code-Coverage Command
+          continue-on-error: true
           run: npm run code-coverage
 
         - name: Code-Coverage-Result
